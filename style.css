@@ -1,14 +1,146 @@
-body{
-    background-color: #FAF7F0;
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary: #0055ff;
+    --secondary: #0f172a;
+    --light: #f8fafc;
+    --gray: #64748b;
 }
 
-.title-box {
-    background-color: #D8D2C2;
-    border-radius: 2%;
-    font-family: 'Libre Baskerville', serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 20px 60px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+.navbar nav a {
+    margin-left: 20px;
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+}
+.navbar nav a:hover {
+    color: var(--primary);
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: var(--secondary);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+.hero h1 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    flex-wrap: wrap;
+}
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+}
+.hero-buttons .btn {
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+    display: inline-block;
+}
+.btn.primary {
+    background: var(--primary);
+    color: white;
+}
+.btn.secondary {
+    background: white;
+    color: var(--secondary);
+}
+
+/* Services */
+.services {
+    padding: 100px 20px;
+    text-align: center;
+}
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+.card p {
+    color: var(--gray);
+}
+
+/* About Section */
+.about {
+    padding: 100px 30px;
+    background: var(--light);
+    text-align: center;
+}
+.about h2 {
+    margin-bottom: 20px;
+}
+.about p {
+    max-width: 800px;
+    margin: auto;
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+/* Contact */
+.contact {
+    padding: 100px 30px;
+    text-align: center;
+}
+.contact p {
+    margin-bottom: 20px;
+    color: var(--gray);
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: var(--secondary);
+    color: white;
 }
