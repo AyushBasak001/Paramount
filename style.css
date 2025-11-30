@@ -1,0 +1,14 @@
+body{
+    background-color: #FAF7F0;
+}
+
+.title-box {
+    background-color: #D8D2C2;
+    border-radius: 2%;
+    font-family: 'Libre Baskerville', serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
